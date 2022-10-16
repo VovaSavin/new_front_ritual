@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+}
+
+/* For flex and grid */
+.item_flex {
+    display: flex;
+}
+
+.item_flex_reverse {
+    flex-direction: row-reverse;
+}
+
+.item_column_flex {
+    flex-direction: column;
+}
+
+.item_column_reverse_flex {
+    flex-direction: column-reverse;
+}
+
+.item_flex_grow {
+    flex-grow: 3;
+}
+
+.item_grid {
+    display: grid;
+}
+
+.item_flex_inline {
+    display: inline-flex;
+}
+
+.item_content_center {
+    justify-content: center;
+}
+
+
+.item_content_around {
+    justify-content: space-around;
+}
+
+.item_content_between {
+    justify-content: space-between;
+}
+
+.item_vertical {
+    align-items: center;
+}
+
+.item_vertical_base {
+    align-items: baseline;
+}
+
+.item_wrap {
+    flex-wrap: wrap;
+}
+
+/*  */
+
+/* Positional inline */
+
+.vertical_aligne_end {
+    align-items: end;
+}
+
+/*  */
+
+/* Text and fonts */
+.f_family_abril {
+    font-family: "Abril Fatface";
+}
+
+.case_up {
+    text-transform: uppercase;
+}
+
+.none_decoration {
+    list-style: none;
+    text-decoration: none;
+}
+
+.text_al_justify {
+    text-align: justify;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.f_bold {
+    font-weight: bolder;
+}
+
+.f_italic {
+    font-style: italic;
+}
+
+.font_14 {
+    font-size: 14px;
+}
+
+.font_18 {
+    font-size: 18px;
+}
+
+
+.font_times_new_roman {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.black_color {
+    color: black;
+}
+
+a[href^="#"] {
+    transition: var(--trans, color .4s ease 0s);
+}
+
+a[href^="#"]:hover {
+    color: gray;
+}
+
+/*  */
+
+/* Margin and padding */
+.margin_around {
+    margin: .8rem;
+}
+
+.padding_around {
+    padding: .3rem;
+}
+
+.padding_bottom_04 {
+    padding-bottom: .4rem;
+}
+
+.padding_r_3 {
+    padding-right: 3rem;
+}
+
+.padding_l_3 {
+    padding-left: 3rem;
+}
+
+
+.margin_r_3 {
+    margin-right: 3rem;
+}
+
+.margin_l_3 {
+    margin-left: 3rem;
+}
+
+/*  */
+
+/* Height and width */
+.height_block {
+    height: 8px;
+}
+
+.height_block_separator {
+    height: 35px;
+}
+
+.width_50_percent {
+    width: 50%;
+}
+
+.max_width_75 {
+    max-width: 35%;
+}
+
+.max_width_5 {
+    width: 40em;
+}
+
+.m_height_5 {
+    height: 25em;
+}
+
+/*  */
+
+/* Color bg */
+.bg_color_black {
+    background-color: black;
+}
+
+/*  */
+
+/* Decoration text */
+.opacity_05 {
+    opacity: .5;
+}
+
+/*  */
+
+/* BackGroundColor */
+.bg_gray {
+    background-color: rgba(223, 221, 221, 0.681);
+}

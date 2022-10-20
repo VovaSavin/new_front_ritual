@@ -156,8 +156,16 @@ a[href^="#"]:hover {
     padding-bottom: .4rem;
 }
 
+.padding_bottom_1 {
+    padding-bottom: 1rem;
+}
+
 .padding_r_3 {
     padding-right: 3rem;
+}
+
+.padding_0 {
+    padding: 0;
 }
 
 .padding_l_3 {
@@ -182,6 +190,10 @@ a[href^="#"]:hover {
 
 .height_block_separator {
     height: 35px;
+}
+
+.width_30_per {
+    width: 27%;
 }
 
 .width_50_percent {
@@ -223,4 +235,8 @@ a[href^="#"]:hover {
 /* BackGroundColor */
 .bg_gray {
     background-color: rgba(223, 221, 221, 0.681);
+}
+
+.bg_darkgray {
+    background-color: darkgrey;
 }

@@ -1,5 +1,8 @@
 <template>
-  <div class="item_flex item_column_flex bg_gray f_family_abril padding_around">
+  <div
+    id="goods"
+    class="item_flex item_column_flex bg_gray f_family_abril padding_around"
+  >
     <div class="item_flex">
       <div
         id="carouselExampleControls"

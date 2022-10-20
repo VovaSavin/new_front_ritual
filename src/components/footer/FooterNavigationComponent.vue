@@ -1,6 +1,31 @@
 <template>
-  <div class="hello item_place">
-    <h2>This is a FooterNavigationComponent</h2>
+  <div class="bg_darkgray item_column_flex width_30_per">
+    <div class="padding_bottom_1">
+      <h3>Навіцація</h3>
+    </div>
+    <div class="">
+      <ul
+        class="
+          item_flex item_column_flex item_content_between
+          case_up
+          none_decoration
+          padding_0
+        "
+      >
+        <li
+          class="padding_bottom_1"
+          v-for="navi in navigation"
+          :key="navi.value"
+        >
+          <a
+            class="none_decoration black_color f_family_abril"
+            :href="navi.link"
+          >
+            {{ navi.text }}
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
       
@@ -9,7 +34,9 @@ export default {
   name: "FooterNavigationComponent",
   props: {},
   data() {
-    return {};
+    return {
+      navigation: JSON.parse(localStorage.getItem("navigation")),
+    };
   },
   created() {},
   methods: {},

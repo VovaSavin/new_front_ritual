@@ -1,5 +1,5 @@
 <template>
-  <div class="item_flex item_place">
+  <div id="contact" class="item_flex item_content_between f_family_abril">
     <FooterContactComponent />
     <FooterNavigationComponent />
     <FooterTellMeComponent />

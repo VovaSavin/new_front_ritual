@@ -50,7 +50,8 @@ export default {
         .then(() => this.getInfoAboutServices())
         .then(() => this.setInToLocalStorage("services", this.services))
         .then(() => this.getAboutUs())
-        .then(() => this.setInToLocalStorage("about", this.about));
+        .then(() => this.setInToLocalStorage("about", this.about))
+        .then(() => this.setInToLocalStorage("navigation", this.navigation));
     },
     async getMainInfo() {
       // Get info from backend
@@ -96,10 +97,10 @@ export default {
       // Return data-oject with list navigation
       this.navigation = [
         { value: 0, text: "Головна", link: "#" },
-        { value: 1, text: "Товари", link: "#" },
-        { value: 2, text: "Послуги", link: "#" },
-        { value: 3, text: "Про нас", link: "#" },
-        { value: 4, text: "Контакти", link: "#" },
+        { value: 1, text: "Товари", link: "#goods" },
+        { value: 2, text: "Послуги", link: "#services" },
+        { value: 3, text: "Про нас", link: "#about" },
+        { value: 4, text: "Контакти", link: "#contact" },
       ];
     },
   },

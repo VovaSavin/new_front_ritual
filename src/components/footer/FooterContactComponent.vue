@@ -1,11 +1,13 @@
 <template>
-  <div class="bg_gray item_place">
-    <h2>Зв'яжітся з нами</h2>
-    <div class="item_column_flex item_content_around">
+  <div class="bg_gray width_30_per">
+    <div class="padding_bottom_1">
+      <h3>Зв'яжітся з нами</h3>
+    </div>
+    <div class="item_flex item_column_flex item_content_around">
       <div
         v-for="contact in listContacts"
         :key="contact.value"
-        class="item_flex item_content_around"
+        class="item_flex item_content_around padding_bottom_1"
       >
         <div>
           <img

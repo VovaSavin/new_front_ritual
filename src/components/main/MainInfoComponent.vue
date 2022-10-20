@@ -15,7 +15,7 @@
         "
       >
         <h2 class="case_up">Чому ми</h2>
-        <h1>?</h1>
+        <h2>?</h2>
       </div>
       <div class="item_flex item_content_between text_left">
         <div class="f_family_abril font_18">

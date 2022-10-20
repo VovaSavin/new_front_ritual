@@ -34,6 +34,7 @@ export default {
       info: null,
       goods: null,
       services: null,
+      about: null,
     };
   },
   created() {
@@ -47,7 +48,9 @@ export default {
         .then(() => this.getInfoAboutGoods())
         .then(() => this.setInToLocalStorage("goods", this.goods))
         .then(() => this.getInfoAboutServices())
-        .then(() => this.setInToLocalStorage("services", this.services));
+        .then(() => this.setInToLocalStorage("services", this.services))
+        .then(() => this.getAboutUs())
+        .then(() => this.setInToLocalStorage("about", this.about));
     },
     async getMainInfo() {
       // Get info from backend
@@ -72,6 +75,14 @@ export default {
       this.services = await fetch(
         `${this.$store.getters.getServerUrl}/rith_services/`
       )
+        .then((response) => response.json())
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    async getAboutUs() {
+      // Get info about owner site
+      this.about = await fetch(`${this.$store.getters.getServerUrl}/about/`)
         .then((response) => response.json())
         .catch(function (error) {
           console.log(error);

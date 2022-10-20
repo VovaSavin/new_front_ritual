@@ -1,5 +1,5 @@
 <template>
-  <div class="item_flex item_content_around">
+  <div class="item_flex item_content_around margin_t_3 margin_b_3">
     <div
       class="item_flex item_column_flex max_width_75"
       :class="{

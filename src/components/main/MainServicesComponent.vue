@@ -3,7 +3,13 @@
     <div class="item_flex">
       <div
         id="carouselExampleControlsS"
-        class="item_flex item_content_between carousel slide w-100"
+        class="
+          item_flex item_content_between
+          carousel
+          slide
+          w-100
+          margin_b_3 margin_t_3
+        "
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">

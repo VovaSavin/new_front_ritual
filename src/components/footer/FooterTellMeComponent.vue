@@ -1,5 +1,5 @@
 <template>
-  <div class="bg_gray width_30_per">
+  <div class="bg_gray width_calc_on_3">
     <div class="padding_bottom_1">
       <h3>Напишіть нам</h3>
     </div>

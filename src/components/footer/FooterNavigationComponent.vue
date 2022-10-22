@@ -1,5 +1,5 @@
 <template>
-  <div class="bg_darkgray item_column_flex width_30_per">
+  <div class="bg_darkgray item_column_flex width_calc_on_3">
     <div class="padding_bottom_1">
       <h3>Навіцація</h3>
     </div>

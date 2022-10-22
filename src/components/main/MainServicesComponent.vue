@@ -1,7 +1,7 @@
 <template>
   <div
     id="services"
-    class="item_flex item_column_flex f_family_abril padding_around"
+    class="item_flex item_column_flex font_times_new_roman padding_around"
   >
     <div class="item_flex">
       <div

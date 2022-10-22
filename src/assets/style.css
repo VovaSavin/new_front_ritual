@@ -2,6 +2,21 @@ body {
     margin: 0;
 }
 
+/* Other position */
+
+.item_fixed {
+    position: fixed;
+    top: 90vh;
+    left: 90vw;
+    z-index: 99;
+}
+
+.item_fixed:hover {
+    background-color: azure;
+}
+
+/*  */
+
 /* For flex and grid */
 .item_flex {
     display: flex;
@@ -77,6 +92,7 @@ body {
 /* Text and fonts */
 .f_family_abril {
     font-family: "Abril Fatface";
+    /* font-family: 'Times New Roman', Times, serif; */
 }
 
 .case_up {
@@ -192,8 +208,16 @@ a[href^="#"]:hover {
     height: 35px;
 }
 
+.w_70_px {
+    width: 80px;
+}
+
 .width_30_per {
     width: 27%;
+}
+
+.width_calc_on_3 {
+    width: calc(100%/3);
 }
 
 .width_50_percent {
@@ -222,12 +246,20 @@ a[href^="#"]:hover {
 /*  */
 
 /* Decoration text (Shaodow, Opacity */
+.cursor_point {
+    cursor: pointer;
+}
+
 .opacity_05 {
     opacity: .5;
 }
 
 .shadow_bottom {
     box-shadow: 0 0.5rem 1rem rgb(0, 0, 0);
+}
+
+.l_float {
+    float: left;
 }
 
 /*  */
@@ -239,4 +271,13 @@ a[href^="#"]:hover {
 
 .bg_darkgray {
     background-color: darkgrey;
+}
+
+/*  */
+
+/* Border */
+
+.border_round {
+    border: 2px solid rgb(69, 69, 69);
+    border-radius: 40px;
 }

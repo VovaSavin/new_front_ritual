@@ -47,23 +47,6 @@
                   <p class="font_18 text_al_justify padding_around">
                     {{ good.description }}
                   </p>
-                  <section class="pb-3 prices">
-                    <div class="my-container">
-                      <div class="row m-0">
-                        <div class="item_flex item_content_center prices-table">
-                          <table>
-                            <tbody>
-                              <tr>
-                                <td>
-                                  Від <b>{{ good.price_of }}</b> грн
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
                 </div>
               </div>
             </div>

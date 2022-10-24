@@ -6,21 +6,23 @@
     <main>
       <MainMobileComponent />
     </main>
-    <div>
-      <!-- <FooterMobileComponent /> -->
-    </div>
+    <footer>
+      <FooterMobileComponent />
+    </footer>
   </div>
 </template>
 
 <script>
 import SideNavigatorComponent from "@/components/mobileNavigation/SideNavigatorComponent.vue";
 import MainMobileComponent from "@/components/mobileMain/MainMobileComponent.vue";
+import FooterMobileComponent from "@/components/mobileFooter/FooterMobileComponent.vue";
 
 export default {
   name: "MobileComponent",
   components: {
     SideNavigatorComponent,
     MainMobileComponent,
+    FooterMobileComponent,
   },
   props: {},
   data() {

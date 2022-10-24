@@ -1,5 +1,8 @@
 <template>
-  <div id="contact" class="item_flex item_content_between f_family_abril">
+  <div
+    id="contact"
+    class="item_flex item_content_between item_wrap f_family_abril"
+  >
     <FooterContactComponent />
     <FooterNavigationComponent />
     <FooterTellMeComponent />

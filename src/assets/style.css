@@ -11,8 +11,14 @@ body {
     z-index: 99;
 }
 
+.fixed_position_only {
+    position: fixed;
+    width: 99vw;
+    z-index: 99;
+}
+
 .item_fixed:hover {
-    background-color: azure;
+    background-color: rgb(222, 222, 222);
 }
 
 /*  */
@@ -108,8 +114,16 @@ body {
     text-align: justify;
 }
 
+.vertical_text {
+    vertical-align: text-top;
+}
+
 .text_left {
     text-align: left;
+}
+
+.text_right {
+    text-align: right;
 }
 
 .text_center {
@@ -132,6 +146,9 @@ body {
     font-size: 18px;
 }
 
+.font_20 {
+    font-size: 20px;
+}
 
 .font_times_new_roman {
     font-family: 'Times New Roman', Times, serif;
@@ -208,6 +225,10 @@ a[href^="#"]:hover {
     height: 35px;
 }
 
+.h_anchor {
+    height: 40px;
+}
+
 .w_70_px {
     width: 80px;
 }
@@ -236,11 +257,16 @@ a[href^="#"]:hover {
     height: 25em;
 }
 
+.size_90_vh_vw {
+    width: 95vw;
+    height: 70vh;
+}
+
 /*  */
 
 /* Color bg */
 .bg_color_black {
-    background-color: black;
+    background-color: rgb(197, 197, 197);
 }
 
 /*  */
@@ -266,7 +292,7 @@ a[href^="#"]:hover {
 
 /* BackGroundColor */
 .bg_gray {
-    background-color: rgba(223, 221, 221, 0.681);
+    background-color: rgb(223, 221, 221);
 }
 
 .bg_darkgray {

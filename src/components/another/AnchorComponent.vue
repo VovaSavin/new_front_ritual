@@ -1,7 +1,10 @@
 <template>
-  <div class="item_fixed border_round w_70_px cursor_point">
-    <div>
-      <a href="#" class="none_decoration black_color"> Вгору </a>
+  <div
+    @click="toUp()"
+    class="item_fixed border_round w_70_px h_anchor cursor_point"
+  >
+    <div class="h-100">
+      <span class="none_decoration black_color vertical_text">Вгору</span>
     </div>
   </div>
 </template>
@@ -14,7 +17,12 @@ export default {
     return {};
   },
   created() {},
-  methods: {},
+  methods: {
+    toUp() {
+      // Go to up
+      document.location.href = "#";
+    },
+  },
 };
 </script>
   

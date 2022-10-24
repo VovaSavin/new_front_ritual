@@ -24,6 +24,7 @@ export default {
     MainServicesComponent,
     MainAboutComponent,
   },
+  props: {},
   data() {
     return {
       info: null,

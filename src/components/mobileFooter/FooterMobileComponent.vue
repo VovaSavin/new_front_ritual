@@ -1,21 +1,29 @@
 <template>
   <div class="item_flex item_column_flex margin_t_3 item_content_around">
     <div class="">
-      <p>Contacts</p>
+      <FooterMobileContactComponent />
     </div>
     <div class="">
-      <p>Navigation</p>
+      <FooterMobileTellMeComponent />
     </div>
     <div class="">
-      <p>Tell Me</p>
+      <FooterMobileNavigationComponent />
     </div>
   </div>
 </template>
         
-  <script>
+<script>
+import FooterMobileContactComponent from "@/components/mobileFooter/footerMobile/FooterMobileContactComponent.vue";
+import FooterMobileNavigationComponent from "@/components/mobileFooter/footerMobile/FooterMobileNavigationComponent.vue";
+import FooterMobileTellMeComponent from "@/components/mobileFooter/footerMobile/FooterMobileTellMeComponent.vue";
+
 export default {
   name: "FooterMobileComponent",
-  components: {},
+  components: {
+    FooterMobileContactComponent,
+    FooterMobileNavigationComponent,
+    FooterMobileTellMeComponent,
+  },
   props: {},
   data() {
     return {};

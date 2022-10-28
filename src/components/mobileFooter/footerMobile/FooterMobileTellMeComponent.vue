@@ -1,6 +1,6 @@
 <template>
-  <div class="bg_gray">
-    <div class="padding_bottom_1">
+  <div class="bg_gray_darkness">
+    <div class="padding_arount_1">
       <h3>Напишіть нам</h3>
     </div>
     <div>

@@ -1,6 +1,6 @@
 <template>
   <div class="bg_darkgray item_column_flex">
-    <div class="padding_bottom_1">
+    <div class="padding_arount_1">
       <h3>Навіцація</h3>
     </div>
     <div class="">

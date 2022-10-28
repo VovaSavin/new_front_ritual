@@ -1,6 +1,6 @@
 <template>
   <div class="item_flex item_column_flex">
-    <div class="fixed_position_only">
+    <div class="fixed_position_only drop_mobile_navi">
       <SideNavigatorComponent />
     </div>
     <main>
@@ -18,7 +18,7 @@ import MainMobileComponent from "@/components/mobileMain/MainMobileComponent.vue
 import FooterMobileComponent from "@/components/mobileFooter/FooterMobileComponent.vue";
 
 export default {
-  name: "MobileComponent",
+  name: "HomeMobile",
   components: {
     SideNavigatorComponent,
     MainMobileComponent,

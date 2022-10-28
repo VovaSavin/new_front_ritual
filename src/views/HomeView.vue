@@ -43,9 +43,73 @@ export default {
     };
   },
   created() {
-    this.runnerListenResizeWindow();
+    this.runApp();
   },
   methods: {
+    runApp() {
+      this.runnerListenResizeWindow()
+        .then(() => this.listNavigation())
+        .then(() => this.getMainInfo())
+        .then(() => this.setInToLocalStorage("info", this.info))
+        .then(() => this.getInfoAboutGoods())
+        .then(() => this.setInToLocalStorage("goods", this.goods))
+        .then(() => this.getInfoAboutServices())
+        .then(() => this.setInToLocalStorage("services", this.services))
+        .then(() => this.getAboutUs())
+        .then(() => this.setInToLocalStorage("about", this.about))
+        .then(() => this.setInToLocalStorage("navigation", this.navigation));
+    },
+    async getMainInfo() {
+      // Get info from backend
+      this.info = await fetch(`${this.$store.getters.getServerUrl}/main_img/`)
+        .then((response) => response.json())
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    async getInfoAboutGoods() {
+      // Get data from BackEnd
+      this.goods = await fetch(
+        `${this.$store.getters.getServerUrl}/rith_goods/`
+      )
+        .then((response) => response.json())
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    async getInfoAboutServices() {
+      // Get data from BackEnd
+      this.services = await fetch(
+        `${this.$store.getters.getServerUrl}/rith_services/`
+      )
+        .then((response) => response.json())
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    async getAboutUs() {
+      // Get info about owner site
+      this.about = await fetch(`${this.$store.getters.getServerUrl}/about/`)
+        .then((response) => response.json())
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    async setInToLocalStorage(nameInStorage, parametr) {
+      // Instance value in to local storage
+      localStorage.setItem(nameInStorage, JSON.stringify(parametr));
+    },
+    async listNavigation() {
+      // Return data-oject with list navigation
+      this.navigation = [
+        { value: 0, text: "Головна", link: "#" },
+        { value: 1, text: "Товари", link: "#goods" },
+        { value: 2, text: "Послуги", link: "#services" },
+        { value: 3, text: "Про нас", link: "#about" },
+        { value: 4, text: "Контакти", link: "#contact" },
+      ];
+    },
+
     async runnerListenResizeWindow() {
       // Run listener for resize window
       this.listenResizeWindow();

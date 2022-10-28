@@ -185,6 +185,10 @@ a[href^="#"]:hover {
     padding: .3rem;
 }
 
+.padding_arount_1 {
+    padding: 1rem;
+}
+
 .padding_bottom_04 {
     padding-bottom: .4rem;
 }
@@ -299,6 +303,10 @@ a[href^="#"]:hover {
     background-color: rgb(223, 221, 221);
 }
 
+.bg_gray_darkness {
+    background-color: rgb(194, 194, 194);
+}
+
 .bg_darkgray {
     background-color: darkgrey;
 }
@@ -314,4 +322,22 @@ a[href^="#"]:hover {
 .border_round {
     border: 2px solid rgb(69, 69, 69);
     border-radius: 40px;
+}
+
+/* Animation */
+#side_navigate {
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: -40%;
+        width: 100%;
+    }
+
+    to {
+        margin-top: 0%;
+        width: 100%;
+    }
 }

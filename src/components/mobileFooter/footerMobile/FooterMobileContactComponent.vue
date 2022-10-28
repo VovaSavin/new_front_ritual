@@ -1,9 +1,9 @@
 <template>
   <div class="bg_gray">
-    <div class="padding_bottom_1">
+    <div class="padding_arount_1">
       <h3>Зв'яжітся з нами</h3>
     </div>
-    <div class="item_flex item_column_flex item_content_around">
+    <div class="item_flex item_column_flex item_content_around margin_around">
       <div
         v-for="contact in listContacts"
         :key="contact.value"

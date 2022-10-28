@@ -1,5 +1,8 @@
 <template>
-  <div class="item_flex item_column_flex margin_t_3 item_content_around">
+  <div
+    id="contact"
+    class="item_flex item_column_flex margin_t_3 item_content_around"
+  >
     <div class="">
       <FooterMobileContactComponent />
     </div>

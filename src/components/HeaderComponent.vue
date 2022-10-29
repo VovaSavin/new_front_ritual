@@ -33,9 +33,7 @@ export default {
       navigation: JSON.parse(localStorage.getItem("navigation")),
     };
   },
-  created() {
-    this.runApp();
-  },
+  created() {},
 };
 </script>
   

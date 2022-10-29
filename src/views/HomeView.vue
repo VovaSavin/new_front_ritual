@@ -47,8 +47,7 @@ export default {
   },
   methods: {
     runApp() {
-      this.runnerListenResizeWindow()
-        .then(() => this.listNavigation())
+      this.listNavigation()
         .then(() => this.getMainInfo())
         .then(() => this.setInToLocalStorage("info", this.info))
         .then(() => this.getInfoAboutGoods())
@@ -57,7 +56,8 @@ export default {
         .then(() => this.setInToLocalStorage("services", this.services))
         .then(() => this.getAboutUs())
         .then(() => this.setInToLocalStorage("about", this.about))
-        .then(() => this.setInToLocalStorage("navigation", this.navigation));
+        .then(() => this.setInToLocalStorage("navigation", this.navigation))
+        .then(() => this.runnerListenResizeWindow());
     },
     async getMainInfo() {
       // Get info from backend

@@ -4,7 +4,11 @@
       <h3>Напишіть нам</h3>
     </div>
     <div>
-      <form class="item_flex item_column_flex margin_around" action="#">
+      <form
+        class="item_flex item_column_flex margin_around"
+        action="#"
+        @submit="sendMail"
+      >
         <input
           class="mb-2"
           type="email"
@@ -12,6 +16,7 @@
           id="e_mail"
           cols="30"
           placeholder="Пошта..."
+          v-model="letterMail.mails"
         />
         <textarea
           class=""
@@ -20,6 +25,7 @@
           cols="30"
           rows="5"
           placeholder="Текст повідомлення..."
+          v-model="letterMail.text"
         ></textarea>
         <input class="margin_around" type="submit" value="Відправити" />
       </form>
@@ -27,15 +33,44 @@
   </div>
 </template>
       
-  <script>
+<script>
+import axios from "axios";
+
 export default {
   name: "FooterTellMeComponent",
   props: {},
   data() {
-    return {};
+    return {
+      letterMail: {
+        mails: null,
+        text: null,
+      },
+    };
   },
   created() {},
-  methods: {},
+  methods: {
+    async sendMail(e) {
+      // Forming JSON for send letter to mail
+      e.preventDefault();
+      await axios({
+        url: `${this.$store.getters.getServerUrl}/send_mail/`,
+        method: "post",
+        headers: {
+          accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        data: JSON.stringify(this.letterMail),
+      })
+        .then(function (response) {
+          console.log(response);
+          alert("Лист відправлено!");
+          location.reload();
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+  },
 };
 </script>
       

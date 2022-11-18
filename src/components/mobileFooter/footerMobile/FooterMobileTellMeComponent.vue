@@ -17,6 +17,7 @@
           cols="30"
           placeholder="Пошта..."
           v-model="letterMail.mails"
+          required="true"
         />
         <textarea
           class=""
@@ -26,6 +27,7 @@
           rows="5"
           placeholder="Текст повідомлення..."
           v-model="letterMail.text"
+          required="true"
         ></textarea>
         <input class="margin_around" type="submit" value="Відправити" />
       </form>

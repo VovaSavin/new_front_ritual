@@ -1,6 +1,6 @@
 <template>
   <div class="item_flex item_column_flex bg_color_black">
-    <div class="text_left" v-if="hideOrShow">
+    <div class="text_left" v-if="hideOrShow" id="side_navigate_close">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="26"

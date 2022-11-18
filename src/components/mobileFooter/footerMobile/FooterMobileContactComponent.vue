@@ -38,6 +38,21 @@
           </p>
         </div>
       </div>
+      <div>
+        <div v-for="cont in contacts" :key="cont.id" class="item_column_flex">
+          <div v-if="cont.our_address" class="item_column_flex">
+            <p>
+              {{ cont.phone }}
+            </p>
+            <p>
+              {{ cont.email }}
+            </p>
+            <p class="font_times_new_roman f_bold">
+              {{ cont.our_address }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -49,13 +64,17 @@ export default {
   data() {
     return {
       listContacts: null,
+      contacts: null,
     };
   },
   created() {
-    this.dataForContacts();
+    this.runGetData();
   },
   methods: {
-    dataForContacts() {
+    runGetData() {
+      this.dataForContacts().then(() => this.getContactAndAddress());
+    },
+    async dataForContacts() {
       // Some data for contacts
       this.listContacts = [
         {
@@ -71,6 +90,16 @@ export default {
           text: "Facebook",
         },
       ];
+    },
+    async getContactAndAddress() {
+      // Get data contacts
+      this.contacts = await fetch(
+        `${this.$store.getters.getServerUrl}/contacts/`
+      )
+        .then((response) => response.json())
+        .catch(function (error) {
+          console.log(error);
+        });
     },
   },
 };
